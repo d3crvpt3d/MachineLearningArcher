@@ -43,11 +43,12 @@ public class PhysicsEngine
 		{
 			archer[i] = new Archer(); //Instanzen der Klasse erstellen
 			archer[i].setG(g); //Einsetzen der EngineBeschleunigung
+			archer[i].setWind(wind);
 
 			System.out.println("archers loadet: "+ i); //DEBUG
 		}
 
-
+		Archer.start();
 	}
 
 	

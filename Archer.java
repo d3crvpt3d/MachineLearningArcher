@@ -5,6 +5,7 @@ public class Archer
      */
     private float g; //Engine-Beschleuningung m/s^2 (height == 20m)
     private float v; //Geschwindigkeit der Kugel m/s
+    private float wind; //Wind m/s
 
 
 
@@ -32,5 +33,15 @@ public class Archer
 
     public void setWind(float wind) {
         this.wind = wind;
+    }
+
+
+
+    /**
+     * Start Generation
+     */
+    public static void start()
+    {
+
     }
 }
