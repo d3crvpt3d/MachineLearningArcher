@@ -9,7 +9,7 @@ public class PhysicsEngine
 	/**
 	 * Variable Initializing
 	 */
-	private int anzahl = 10; //Anzahl der 'Canons' pro Generation
+	private int anzahl = 10; //Anzahl der 'archers' pro Generation
 	private float wind = 0f; //Wind m/s (height == 20m)
 	private float g = 9.81f; //EngineBeschleunigung m/s^2
 
@@ -18,7 +18,7 @@ public class PhysicsEngine
 	/**
 	 * Variable Declaration
 	 */
-	private Canons[] canon = new Canons[anzahl];
+	private Archer[] archer = new Archer[anzahl];
 
 
 
@@ -28,7 +28,7 @@ public class PhysicsEngine
 	 */
 	public static void main(String[] args)
 	{	
-		new Canons();
+		new Archer();
 		new PhysicsEngine();
 	}
 
@@ -39,13 +39,15 @@ public class PhysicsEngine
 	 */
 	public PhysicsEngine()
 	{
-		for(int i = anzahl; i < canon.length; i++)
+		for(int i = anzahl; i < archer.length; i++)
 		{
-			canon[i] = new Canons(); //Instanzen der Klasse erstellen
-			canon[i].setG(g); //Einsetzen der EngineBeschleunigung
+			archer[i] = new Archer(); //Instanzen der Klasse erstellen
+			archer[i].setG(g); //Einsetzen der EngineBeschleunigung
 
-			System.out.println("Canons loadet: "+ i); //DEBUG
+			System.out.println("archers loadet: "+ i); //DEBUG
 		}
+
+
 	}
 
 	
@@ -57,7 +59,7 @@ public class PhysicsEngine
 	{
 		try
 		{	PrintStream writer = new PrintStream( new File("output.txt"));
-			writer.println("daad");
+			writer.println("test123");
 			writer.close();
 		
 		}
